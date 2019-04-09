@@ -2,11 +2,6 @@
   <div class="home">
     <h1>{{ message }}</h1>
     <!-- <h1>Products: {{ products }}</h1> -->
-    <p>Name: <input type="text" v-model ="newProductName"></p>
-    <p>Description: <input type="text" v-model ="newProductDescription"></p>
-    <p>Price: <input type="text" v-model ="newProductPrice"></p>
-    <button v-on:click="makeProduct()">Add New Product</button>
-
     <div v-for="product in products">
       <p>{{product.name}}</p>
       <p>{{product.price}}</p>

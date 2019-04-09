@@ -1,17 +1,38 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from './views/Home.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Home from './views/Home.vue';
+import Test from './views/Test.vue';
+import ProductsNew from './views/ProductsNew.vue';
+import ProductsShow from './views/ProductsShow.vue';
 
-Vue.use(Router)
+
+
+
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
+      path: '/products/new',
+      name: 'products_new',
+      component: ProductsNew
+    },
+    {
+      path: '/products/:id',
+      name: 'products_show',
+      component: ProductsShow
+    },
+    {
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     },
     {
       path: '/about',
